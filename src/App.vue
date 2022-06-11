@@ -1,30 +1,17 @@
+<!--
+ * @Author: wlj
+ * @Date: 2022-05-24 09:18:01
+ * @LastEditors: wlj
+ * @LastEditTime: 2022-06-01 10:37:45
+ * @Description: 
+-->
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <router-view></router-view>
 </template>
 
+<script lang="ts" setup></script>
+
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+@import "@/assets/style/global.less";
+@import "@/assets/iconfont/iconfont.css";
 </style>

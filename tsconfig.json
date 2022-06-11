@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
+    "target": "esnext",//ts要编译成的版本 esnext 就是es的最新版本
+    "module": "esnext",//要使用的模块化的规范  es
+    "strict": true,//把所有严格检查全打开
     "jsx": "preserve",
     "moduleResolution": "node",
     "skipLibCheck": true,
@@ -12,14 +12,24 @@
     "useDefineForClassFields": true,
     "sourceMap": true,
     "baseUrl": ".",
+    //"allowJs": false, 是否对js文件进行编译 
+    //'checkJs':false 是否检查js文件的代码符合规范
+    //"removeComments":false, 不移除注释
+    //"noEmit":true  不生成编译后的文件
+    //"noEmitOnError":true 如果有错误就不生成编译后的文件
+    //"alwaysStrict": true, 用来设置编译后的文件是否使用严格模式
+    "noImplicitAny": true, //不允许隐式的any类型
+    "noImplicitThis": true,//不允许不明确的this 
     "types": [
-      "webpack-env"
+      "webpack-env",
+      "element-plus/global"
     ],
     "paths": {
       "@/*": [
         "src/*"
       ]
     },
+    //项目中运行时需要使用的库
     "lib": [
       "esnext",
       "dom",
@@ -27,6 +37,7 @@
       "scripthost"
     ]
   },
+  //希望被编译的文件
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
@@ -34,6 +45,7 @@
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ],
+  //不需要被编译的文件
   "exclude": [
     "node_modules"
   ]
